@@ -24,6 +24,19 @@ export class MainComponent {
     this.numberOfItems > 0 ? this.numberOfItems-- : (this.numberOfItems = 0);
   }
 
+  onMainImageIsClick(){
+    const main = document.querySelector('.main');
+    const imageContainer = document.createElement('img');
+    imageContainer.className = 'image-container';
+    imageContainer.style.width = '600px';
+    imageContainer.style.height = '600px';
+    imageContainer.style.position = 'absolute';
+    imageContainer.style.zIndex = '2';
+    imageContainer.src = this.mainImage;
+    main?.appendChild(imageContainer);
+    
+  }
+
   changeImage(event: any) {
     if (
       event.target.currentSrc ===

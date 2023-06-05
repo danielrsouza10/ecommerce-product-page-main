@@ -1,6 +1,6 @@
 <div class="main">
   <div class="images-container">
-    <img [src]="mainImage" alt="image-product-1" width="350px" height="350px" />
+    <img [src]="mainImage" alt="image-product-1" width="350px" height="350px" (click)="onMainImageIsClick()"/>
 
     <div class="small-images">
       <img
@@ -12,26 +12,6 @@
         height="75px"
       />
 
-      <!-- <img
-        src="assets/images/image-product-2-thumbnail.jpg"
-        alt="image-product-2-thumbnail"
-        width="75px"
-        height="75px"
-      />
-
-      <img
-        src="assets/images/image-product-3-thumbnail.jpg"
-        alt="image-product-3-thumbnail"
-        width="75px"
-        height="75px"
-      />
-
-      <img
-        src="assets/images/image-product-4-thumbnail.jpg"
-        alt="image-product-4-thumbnail"
-        width="75px"
-        height="75px"
-      /> -->
     </div>
   </div>
 
