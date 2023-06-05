@@ -1,21 +1,21 @@
 <div class="main">
   <div class="images-container">
-    <img
-      src="/assets/images/image-product-1.jpg"
+    <img [src]="mainImage"
       alt="image-product-1"
       width="350px"
       height="350px"
     />
 
     <div class="small-images">
-      <img
-        src="assets/images/image-product-1-thumbnail.jpg"
-        alt="image-product-1-thumbnail"
+      <img *ngFor="let imagem of images"
+        [src]="imagem"
+        (click)="changeImage()"
+        alt="image-product-thumbnail"
         width="75px"
         height="75px"
       />
 
-      <img
+      <!-- <img
         src="assets/images/image-product-2-thumbnail.jpg"
         alt="image-product-2-thumbnail"
         width="75px"
@@ -34,7 +34,7 @@
         alt="image-product-4-thumbnail"
         width="75px"
         height="75px"
-      />
+      /> -->
     </div>
   </div>
 
