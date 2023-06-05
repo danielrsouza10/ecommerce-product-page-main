@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-
+  evento = '';
   numberOfItems: number = 0;
   mainImage: string = 'assets/images/image-product-1.jpg';
   images: string[] = [
@@ -24,7 +24,24 @@ export class MainComponent {
     this.numberOfItems > 0 ? this.numberOfItems-- : (this.numberOfItems = 0);
   }
 
-  changeImage() {
-    alert('you click me');
+  changeImage(event: any) {
+    if (
+      event.target.currentSrc ===
+      'http://localhost:4200/assets/images/image-product-1-thumbnail.jpg'
+    ) {
+      this.mainImage = 'assets/images/image-product-1.jpg';
+    } else if (
+      event.target.currentSrc ===
+      'http://localhost:4200/assets/images/image-product-2-thumbnail.jpg'
+    ) {
+      this.mainImage = 'assets/images/image-product-2.jpg';
+    } else if (
+      event.target.currentSrc ===
+      'http://localhost:4200/assets/images/image-product-3-thumbnail.jpg'
+    ) {
+      this.mainImage = 'assets/images/image-product-3.jpg';
+    } else {
+      this.mainImage = 'assets/images/image-product-4.jpg';
+    }
   }
 }

@@ -1,15 +1,12 @@
 <div class="main">
   <div class="images-container">
-    <img [src]="mainImage"
-      alt="image-product-1"
-      width="350px"
-      height="350px"
-    />
+    <img [src]="mainImage" alt="image-product-1" width="350px" height="350px" />
 
     <div class="small-images">
-      <img *ngFor="let imagem of images"
+      <img
+        *ngFor="let imagem of images"
         [src]="imagem"
-        (click)="changeImage()"
+        (click)="changeImage($event)"
         alt="image-product-thumbnail"
         width="75px"
         height="75px"
@@ -51,7 +48,8 @@
     <p>250.00</p>
 
     <span class="increase-buttons">
-      <svg (click)="onMinusButton()"
+      <svg
+        (click)="onMinusButton()"
         width="12"
         height="4"
         xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +63,9 @@
         </defs>
         <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
       </svg>
-      <span>{{numberOfItems}}</span>
-      <svg (click)="onPlusButton()"
+      <span>{{ numberOfItems }}</span>
+      <svg
+        (click)="onPlusButton()"
         width="12"
         height="12"
         xmlns="http://www.w3.org/2000/svg"
