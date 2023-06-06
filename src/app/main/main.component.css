@@ -1,17 +1,29 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .main {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 30px 50px 50px 0px;
+  gap: 50px;
 }
 
 .images-container {
-  padding: 50px;
-  margin-left: 150px;
+
+
 }
 
 .description {
-  padding: 50px;
-  margin-top: 30px;
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40vw;
+  min-width: 300px;
+  gap: 20px;
+
 }
 
 .small-images {
@@ -32,4 +44,29 @@
   width: 250px;
   padding: 10px;
   background-color: lightgray;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 70%);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.modal-image > svg {
+  display: inline;
+  
+}
+
+img{
+  cursor: pointer;
 }

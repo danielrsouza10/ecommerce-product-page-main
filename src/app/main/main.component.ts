@@ -9,6 +9,8 @@ export class MainComponent {
   evento = '';
   numberOfItems: number = 0;
   mainImage: string = 'assets/images/image-product-1.jpg';
+  modalActive: boolean = false;
+
   images: string[] = [
     'assets/images/image-product-1-thumbnail.jpg',
     'assets/images/image-product-2-thumbnail.jpg',
