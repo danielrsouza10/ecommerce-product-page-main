@@ -41,9 +41,13 @@
 }
 
 .increase-buttons {
-  width: 250px;
+  display: flex;
+  width: 100px;
+  max-width: 150px;
   padding: 10px;
-  background-color: lightgray;
+  background-color: rgb(225, 225, 225);
+  justify-content: space-around;
+  align-items: center;
 }
 
 .modal {
@@ -69,4 +73,9 @@
 
 img{
   cursor: pointer;
+}
+
+.button-cart-container{
+  display: flex;
+  justify-content: space-between;
 }
