@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class MainComponent {
   evento = '';
   numberOfItems: number = 0;
+  addToBasket: number = 0;
   mainImage: string = 'assets/images/image-product-1.jpg';
   modalActive: boolean = false;
 
@@ -26,7 +27,11 @@ export class MainComponent {
     this.numberOfItems > 0 ? this.numberOfItems-- : (this.numberOfItems = 0);
   }
 
-  onMainImageIsClick(){
+  onAddToCart(){
+this.addToBasket = this.numberOfItems;
+  }
+
+  onMainImageIsClick() {
     const main = document.querySelector('.main');
     const imageContainer = document.createElement('img');
     imageContainer.className = 'image-container';
@@ -36,7 +41,6 @@ export class MainComponent {
     imageContainer.style.zIndex = '2';
     imageContainer.src = this.mainImage;
     main?.appendChild(imageContainer);
-    
   }
 
   changeImage(event: any) {

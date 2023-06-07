@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
@@ -12,8 +12,6 @@
 }
 
 .images-container {
-
-
 }
 
 .description {
@@ -23,7 +21,6 @@
   max-width: 40vw;
   min-width: 300px;
   gap: 20px;
-
 }
 
 .small-images {
@@ -68,14 +65,14 @@
 
 .modal-image > svg {
   display: inline;
-  
 }
 
-img{
+img {
   cursor: pointer;
+  border-radius: 15px;
 }
 
-.button-cart-container{
+.button-cart-container {
   display: flex;
   justify-content: space-between;
 }
