@@ -1,18 +1,20 @@
 <app-nav-bar [basketItems]="addToBasket"></app-nav-bar>
 <div class="main">
   <div class="images-container">
-    <img
-      [src]="mainImage"
-      alt="image-product-1"
-      width="350px"
-      height="350px"
-      (click)="modalActive = true"
-    />
+    <div class="bigger-images">
+      <img
+        [src]="mainImage"
+        alt="image-product-1"
+        width="350px"
+        height="350px"
+        (click)="modalActive = true"
+      />
+    </div>
 
     <div class="small-images">
       <img
-        *ngFor="let imagem of images"
-        [src]="imagem"
+        *ngFor="let image of images"
+        [src]="image"
         (click)="changeImage($event)"
         alt="image-product-thumbnail"
         width="75px"
@@ -24,7 +26,7 @@
         [ngClass]="modalActive === true ? 'show' : ''"
         (click)="modalActive = false"
       >
-        <div class="modal-image">
+        <div class="modal-container">
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
@@ -32,11 +34,32 @@
               fill-rule="evenodd"
             />
           </svg>
-          <img
-            [src]="mainImage"
-            alt="mainImage"
-            style="max-width: 25vw; height: auto"
-          />
+          <div class="modal-image">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <img
+              [src]="mainImage"
+              alt="mainImage"
+              style="max-width: 35vw; height: auto"
+            />
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          
         </div>
       </div>
     </div>

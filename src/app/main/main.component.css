@@ -23,9 +23,17 @@
   gap: 20px;
 }
 
+.bigger-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .small-images {
   padding: 20px 0 0 0;
   display: flex;
+  justify-content: center;
   gap: 15px;
 }
 
@@ -63,8 +71,18 @@
   }
 }
 
-.modal-image > svg {
+.modal-container > svg {
   display: inline;
+}
+
+.modal-image{
+  display: flex;
+  align-items: center;
+}
+
+.modal-image>sgv{
+  background-color: white;
+  border-radius: 20px;
 }
 
 img {
