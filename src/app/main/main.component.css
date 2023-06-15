@@ -37,6 +37,11 @@
   gap: 15px;
 }
 
+.small-images > img{
+
+
+}
+
 .discount {
   background-color: orange;
   border-radius: 20%;
