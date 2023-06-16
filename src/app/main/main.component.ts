@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ export class MainComponent {
   addToBasket: number = 0;
   mainImage: string = 'assets/images/image-product-1.jpg';
   modalActive: boolean = false;
+  currentImage: string = "";
 
   images: string[] = [
     'assets/images/image-product-1-thumbnail.jpg',
@@ -44,11 +46,13 @@ this.addToBasket = this.numberOfItems;
   }
 
   changeImage(event: any) {
+    this.currentImage = event.target.currentSrc;
     if (
       event.target.currentSrc ===
       'http://localhost:4200/assets/images/image-product-1-thumbnail.jpg'
     ) {
       this.mainImage = 'assets/images/image-product-1.jpg';
+     
     } else if (
       event.target.currentSrc ===
       'http://localhost:4200/assets/images/image-product-2-thumbnail.jpg'
