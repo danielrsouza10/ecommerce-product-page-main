@@ -23,7 +23,7 @@
   gap: 20px;
 }
 
-.bigger-images{
+.bigger-images {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,9 +37,8 @@
   gap: 15px;
 }
 
-.small-images > img.selected{
+.small-images>img:active {
   border: 1px solid black;
-
 }
 
 .discount {
@@ -60,12 +59,12 @@
   align-items: center;
 }
 
-.plus-button, .minus-button{
+.plus-button,
+.minus-button {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-
 
 .modal {
   width: 100vw;
@@ -87,12 +86,12 @@
   display: inline;
 }
 
-.modal-image{
+.modal-image {
   display: flex;
   align-items: center;
 }
 
-.modal-image>sgv{
+.modal-image > sgv {
   background-color: white;
   border-radius: 20px;
 }
